@@ -33,6 +33,7 @@ const pageReducer = (state = initialState, action) => {
       };
 
     case CREATE_PAGE_REQUEST:
+      console.log(state);
       return { ...state, createPageError: "", createPageLoading: true };
     case CREATE_PAGE_ERROR:
       return {
