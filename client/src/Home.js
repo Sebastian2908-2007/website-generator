@@ -10,13 +10,14 @@ const Home = () => {
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
+  //if(pages)console.log(pages);
 
-  const handleSubmit = async () => {
+  const handleSubmit =  () => {
     if (!name) {
       setIsValid(false);
       return;
     }
-    createPage(name)(dispatch);
+    createPage(name);
   };
 
   return (
@@ -81,7 +82,7 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
-              {pages
+              {/*pages
                 ? pages.map((page) => (
                     <tr key={page._id}>
                       <td>{page._id}</td>
@@ -92,7 +93,7 @@ const Home = () => {
                       </td>
                     </tr>
                   ))
-                : "No Page"}
+                : "No Page"*/}
             </tbody>
           </table>
         </div>
